@@ -1,0 +1,31 @@
+<mvc:View
+	controllerName="sap.ui.demo.wt.controller.HelloPanel"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Panel
+		headerText="{i18n>helloPanelTitle}"
+		class="sapUiResponsiveMargin"
+		width="auto">
+		<content>
+			<Button
+			    icon="sap-icon://world"
+				text="{i18n>openDialogButtonText}"
+				press="onOpenDialog"
+				class="sapUiSmallMarginEnd"/>
+			<Button
+				text="{i18n>showHelloButtonText}"
+				press="onShowHello"
+				class="myCustomButton"/>
+			<Input
+				value="{/recipient/name}"
+				valueLiveUpdate="true"
+				width="60%"/>
+			<Text
+				text="Hello {/recipient/name}"
+				class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+            <Input text= "User"     placeholder="Ingrese Usuario ..." />
+    	    <Input text= "Password" placeholder="Ingrese Clave ..." type="Password" />
+    	    <Button text= "Log On" press="logon" />
+		</content>
+	</Panel>
+</mvc:View>
